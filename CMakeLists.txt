@@ -11,3 +11,5 @@ find_library(PQXX_LIB pqxx REQUIRED)
 
 add_executable(test_orbital_tracking tests.cpp OrbitalTracker.cpp)
 target_link_libraries(test_orbital_tracking ${PQ_LIB} ${PQXX_LIB} ${GTEST_BOTH_LIBRARIES})
+
+add_executable(refactoring refactoring_main.cpp)
