@@ -21,6 +21,10 @@ protected:
     }
 };
 
+TEST_F(TestBasicOperations, TestReadNonExistent) {
+    ASSERT_ANY_THROW(tracker.GetByName(body_test.name));
+}
+
 TEST_F(TestBasicOperations, TestCreate) {
     tracker.InsertNew(body_test);
 
